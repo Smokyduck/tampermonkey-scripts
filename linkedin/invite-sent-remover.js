@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Invite Sent Remover
 // @version      0.1
-// @updateURL    
+// @updateURL    https://github.com/Smokyduck/tampermonkey-scripts/blob/master/linkedin/invite-sent-remover.js
 // @author       Smokyduck
 // @match        https://www.linkedin.com/search/results/*
 // ==/UserScript==
