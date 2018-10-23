@@ -16,5 +16,7 @@ function removeNode(node){
 };
 
 document.body.addEventListener("keydown",
-                               q=>{if(event.key == '`' || 'ё') document.querySelectorAll(".search-result.search-result__occluded-item.ember-view").forEach(removeNode)},
+                               q=>{if(event.key == '`' || event.key == 'ё')
+                                       {document.querySelectorAll(".search-result.search-result__occluded-item.ember-view").forEach(removeNode);}
+                               },
                                false);
