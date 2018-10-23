@@ -1,19 +1,19 @@
 // ==UserScript==
-// @name         Invite Sent Remover
-// @version      0.1
-// @updateURL    https://github.com/Smokyduck/tampermonkey-scripts/blob/master/linkedin/invite-sent-remover.js
+// @name         Withdrawer
+// @version      0.2
+// @updateURL    https://github.com/Smokyduck/tampermonkey-scripts/blob/master/linkedin/withdrawer.js
 // @author       Smokyduck
-// @match        https://www.linkedin.com/search/results/*
+// @match        https://www.linkedin.com/mynetwork/invitation-manager/sent/*
 // ==/UserScript==
 
-function removeNode(node){
-	if (node.querySelector(".search-result__actions--primary.button-secondary-medium.m5")) {
-		if (node.querySelector(".search-result__actions--primary.button-secondary-medium.m5").innerText.match(/Invite Sent/)) {
-	        node.remove();
-        }
+function withdraw(node){
+    if (node.querySelector(".time-badge.time-ago").innerText.match(/month/)) {
+        setTimeout(function () {
+            node.querySelector(".invitation-card__action-btn.button-tertiary-medium-muted").click();
+        }, 500)
     }
 };
 
-document.body.addEventListener("mousedown",
-                               q=>{document.querySelectorAll(".search-result.search-result__occluded-item.ember-view").forEach(removeNode)},
+document.body.addEventListener("keydown",
+                               q=>{if (event.key == '`' || 'ё') {document.body.querySelectorAll('.js-invitation-card__invite-details-container.display-flex').forEach(withdraw)}},
                                false);
