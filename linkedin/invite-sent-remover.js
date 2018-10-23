@@ -7,14 +7,14 @@
 // @match        https://www.linkedin.com/mynetwork/invitation-manager/sent/*
 // ==/UserScript==
 
-function withdraw(node){
-    if (node.querySelector(".time-badge.time-ago").innerText.match(/month/)) {
-        setTimeout(function () {
-            node.querySelector(".invitation-card__action-btn.button-tertiary-medium-muted").click();
-        }, 500)
+function removeNode(node){
+	if (node.querySelector(".search-result__actions--primary.button-secondary-medium.m5")) {
+		if (node.querySelector(".search-result__actions--primary.button-secondary-medium.m5").innerText.match(/Invite Sent/)) {
+	        node.remove();
+        }
     }
 };
 
 document.body.addEventListener("keydown",
-                               q=>{if (event.key == '`' || 'ё') {document.body.querySelectorAll('.js-invitation-card__invite-details-container.display-flex').forEach(withdraw)}},
+                               q=>{if(event.key == '`' || 'ё') document.querySelectorAll(".search-result.search-result__occluded-item.ember-view").forEach(removeNode)},
                                false);
