@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Withdrawer
 // @version      0.2
-// @updateURL    https://github.com/Smokyduck/tampermonkey-scripts/blob/master/linkedin/withdrawer.js
+// @updateURL    https://raw.githubusercontent.com/Smokyduck/tampermonkey-scripts/master/linkedin/invite-sent-remover.js
 // @author       Smokyduck
 // @match        https://www.linkedin.com/mynetwork/invitation-manager/sent/*
 // ==/UserScript==
