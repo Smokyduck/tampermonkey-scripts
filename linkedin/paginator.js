@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         paginator
 // @version      0.1
-// @updateURL    
-// @downloadURL  
+// @updateURL    https://raw.githubusercontent.com/Smokyduck/tampermonkey-scripts/master/linkedin/paginator.js
+// @downloadURL  https://raw.githubusercontent.com/Smokyduck/tampermonkey-scripts/master/linkedin/paginator.js
 // @author       Smokyduck
 // @match        https://www.linkedin.com/search/results/*
 // ==/UserScript==
