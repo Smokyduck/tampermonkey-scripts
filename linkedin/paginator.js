@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         paginator
-// @version      0.1
+// @version      0.1.1
 // @updateURL    https://raw.githubusercontent.com/Smokyduck/tampermonkey-scripts/master/linkedin/paginator.js
 // @downloadURL  https://raw.githubusercontent.com/Smokyduck/tampermonkey-scripts/master/linkedin/paginator.js
 // @author       Smokyduck
