@@ -13,8 +13,8 @@ function navigator(direction){
 
 document.body.addEventListener("keydown",
                                q=>{if(event.key == '1')
-                                       navigator('prev')
+                                       navigator('artdeco-pagination__button--previous')
 				   else if (event.key == '2')
-                                       navigator('next')
+                                       navigator('artdeco-pagination__button--next')
                                },
                                false);
