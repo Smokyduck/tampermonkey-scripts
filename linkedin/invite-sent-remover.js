@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         invite-sent-remover
-// @version      0.1
+// @version      0.1.1
 // @updateURL    https://raw.githubusercontent.com/Smokyduck/tampermonkey-scripts/master/linkedin/invite-sent-remover.js
 // @downloadURL  https://raw.githubusercontent.com/Smokyduck/tampermonkey-scripts/master/linkedin/invite-sent-remover.js
 // @author       Smokyduck
@@ -8,8 +8,8 @@
 // ==/UserScript==
 
 function removeNode(node){
-	if (node.querySelector(".search-result__actions--primary.button-secondary-medium.m5")) {
-		if (node.querySelector(".search-result__actions--primary.button-secondary-medium.m5").innerText.match(/Invite Sent/)) {
+	if (node.querySelector(".search-result__action-button.search-result__actions--primary.artdeco-button.artdeco-button--default.artdeco-button--2.artdeco-button--secondary")) {
+		if (node.querySelector(".search-result__action-button.search-result__actions--primary.artdeco-button.artdeco-button--default.artdeco-button--2.artdeco-button--secondary").innerText.match(/Invite Sent/)) {
 	        node.remove();
         }
     }
