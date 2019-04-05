@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         invite-accepter
-// @version      0.2
+// @version      0.2.1
 // @updateURL    https://raw.githubusercontent.com/Smokyduck/tampermonkey-scripts/master/linkedin/invite-accepter.js
 // @downloadURL  https://raw.githubusercontent.com/Smokyduck/tampermonkey-scripts/master/linkedin/invite-accepter.js
 // @author       Smokyduck
@@ -8,9 +8,10 @@
 // ==/UserScript==
 
 function acceptInvite(){
-	if (document.body.querySelector(".button-primary-large.ml1")) {
-		if (document.body.querySelector(".button-primary-large.ml1").innerText.match(/Send/)) {
-	        document.body.querySelector(".button-primary-large.ml1").click();
+    var q;
+	if (q = document.body.querySelector(".artdeco-button.artdeco-button--3.ml1")) {
+		if (q.innerText.match(/Send/)) {
+	        q.click();
         }
     }
 };
